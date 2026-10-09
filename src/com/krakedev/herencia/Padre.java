@@ -3,6 +3,10 @@ package com.krakedev.herencia;
 public class Padre {
 	private int defectos;
 	private int virtudes;
+	private double totalAhorrado;
+
+	public Padre() {
+	}
 	
 //	@Override
 //	public String toString() {
