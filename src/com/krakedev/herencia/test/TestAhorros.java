@@ -9,17 +9,21 @@ public class TestAhorros {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Padre padre = new Padre(5, 2);
+		// Paso 1: Padre
+		Padre padre = new Padre("Roberto", 5, 2);
 		padre.ahorrar(100.0);
-		System.out.println("Padre total ahorrado: " + padre.getTotalAhorrado());
+		System.out.println("Padre (" + padre.getNombre() + ") total ahorrado: " + padre.getTotalAhorrado());
 
+		// Paso 2: Hija
 		Hija hija = new Hija(4, 1);
+		hija.setNombre("Thais");
 		hija.ahorrar(100.0);
-		System.out.println("Hija total ahorrado: " + hija.getTotalAhorrado());
+		System.out.println("Hija (" + hija.getNombre() + ") total ahorrado: " + hija.getTotalAhorrado());
 
-		Hijo hijo = new Hijo(5, 2, 8);
+		// Paso 3: Hijo
+		Hijo hijo = new Hijo("Alan", 5, 2, 8);
 		hijo.ahorrar(100.0);
-		System.out.println("Hijo total ahorrado: " + hijo.getTotalAhorrado());
+		System.out.println("Hijo (" + hijo.getNombre() + ") total ahorrado: " + hijo.getTotalAhorrado());
 	}
 
 }
