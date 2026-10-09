@@ -7,50 +7,42 @@ public class Padre {
 
 	public Padre() {
 	}
-	
-//	@Override
-//	public String toString() {
-//		return "Padre [defectos=" + defectos + ", virtudes=" + virtudes + "]";
-//	}
-	
-	
-//	public Padre(){
-//		System.out.println("Soy el constructor vacio del Padre");
-//	}
-	
-	
-	public Padre(int virtudes, int defectos){
-		this.defectos = defectos;
+
+	public Padre(int virtudes, int defectos) {
 		this.virtudes = virtudes;
+		this.defectos = defectos;
 	}
-	
-	@Override
-	public String toString(){
-		return "hola";
-	}
-	
-	
-	
-	
+
 	public int getDefectos() {
 		return defectos;
 	}
+
 	public void setDefectos(int defectos) {
 		this.defectos = defectos;
 	}
+
 	public int getVirtudes() {
 		return virtudes;
 	}
+
 	public void setVirtudes(int virtudes) {
 		this.virtudes = virtudes;
 	}
-	
-	public void imprimir(){
-		System.out.println("Virtudes: " + virtudes);
-		System.out.println("Defectos: " + defectos);
+
+	public double getTotalAhorrado() {
+		return totalAhorrado;
 	}
-	
-	public void guardarSecreto(){
-		System.out.println("Esto no se hereda");
+
+	public void setTotalAhorrado(double totalAhorrado) {
+		this.totalAhorrado = totalAhorrado;
+	}
+
+	public void ahorrar(double monto) {
+		totalAhorrado += monto;
+	}
+
+	@Override
+	public String toString() {
+		return "Padre [defectos=" + defectos + ", virtudes=" + virtudes + ", totalAhorrado=" + totalAhorrado + "]";
 	}
 }
